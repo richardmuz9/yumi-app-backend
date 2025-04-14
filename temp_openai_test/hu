@@ -1,0 +1,5 @@
+import openai
+
+print("Path to openai module:", openai.__file__)
+print("Contents of openai:", dir(openai))
+

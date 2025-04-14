@@ -1,0 +1,14 @@
+import openai
+
+print("OpenAI version:", openai.__version__)
+print("Has ChatCompletion?", "ChatCompletion" in dir(openai))
+
+try:
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role": "user", "content": "Hello from test script"}]
+    )
+    print("SUCCESS:", response)
+except Exception as e:
+    print("ERROR:", str(e))
+
